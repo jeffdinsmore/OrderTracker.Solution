@@ -25,11 +25,7 @@ namespace OrderTracker.Controllers
       return View(vendor);
     }
 
-    [HttpPost("/vendors/delete")]
-    public ActionResult DeleteAll()
-    {
-      Order.ClearInstance();
-      return View();
-    }
+    
+    
   }
 }

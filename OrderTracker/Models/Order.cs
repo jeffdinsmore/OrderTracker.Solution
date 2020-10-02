@@ -26,9 +26,6 @@ namespace OrderTracker.Models
     {
       return _instances[searchId-1];
     }
-    public void ClearInstance(int searchId)
-    {
-      _instances.Remove(searchId);
-    }
+    
   }
 }
