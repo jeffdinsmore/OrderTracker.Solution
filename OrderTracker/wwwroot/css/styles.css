@@ -39,3 +39,7 @@ btn-danger {
 hr {
   border-top: 2px solid lightgray;
 }
+
+.jumbotron {
+  background-color: rgb(255, 220, 220);
+}
