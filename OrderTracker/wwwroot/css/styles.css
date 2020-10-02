@@ -14,3 +14,20 @@ div#footer {
   background:#333;
   padding:10px;
 }
+
+p#topRow {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+input {
+  margin-left: 100px;
+}
+
+button {
+  margin: 10px 0px 10px 0px;
+}
+
+btn-success {
+  width: 200px;
+}
