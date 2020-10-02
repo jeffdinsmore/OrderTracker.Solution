@@ -8,4 +8,8 @@
   <h3>Vendor: @Model["vendor"].Name</h3>
   <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a></p>
   <p><a href='/vendors'>View all vendors</a></p>
+
+  <form action="/orders/delete" method="post">
+    <button type="submit" class="btn btn-danger" name="button">Delete Orders</button>
+  </form>
 </div>

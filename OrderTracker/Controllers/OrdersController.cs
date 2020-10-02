@@ -11,7 +11,7 @@ namespace OrderTracker.Controllers
     public ActionResult DeleteAll()
     {
       Order.ClearAll();
-      return View();
+      return RedirectToAction("Index");
     }
     
     [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
