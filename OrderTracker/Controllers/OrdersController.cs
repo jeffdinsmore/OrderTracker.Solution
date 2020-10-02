@@ -6,13 +6,6 @@ namespace OrderTracker.Controllers
 {
   public class OrdersController : Controller
   {
-
-    [HttpPost("/orders/delete")]
-    public ActionResult DeleteAll()
-    {
-      Order.ClearAll();
-      return RedirectToAction("Index");
-    }
     
     [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
@@ -30,6 +23,13 @@ namespace OrderTracker.Controllers
     {
       Vendor vendor = Vendor.Find(vendorId);
       return View(vendor);
+    }
+
+    [HttpPost("/vendors/delete")]
+    public ActionResult DeleteAll()
+    {
+      Order.ClearInstance();
+      return View();
     }
   }
 }
