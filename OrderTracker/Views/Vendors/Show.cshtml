@@ -15,11 +15,12 @@
     <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Item</a></li>
   }
   </ol>
-  <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
-  <p><a href='/vendors'>Return to vendor list</a></p>
-  <p><a href='/'>Return to Main Page</a></p>
+  <hr>
+  <h5 style="margin: 20px 0px 20px 0px"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></h5>
+  <h5 style="margin: 0px 0px 20px 0px"><a href='/vendors'>Back to vendor list</a></h5>
+  <h5><a href='/'>Back to homepage</a></h5>
 
   <form action="/vendors/{vendorId}/delete" method="post">
-    <button type="submit" class="btn btn-danger" name="button">Delete Orders</button>
+    <button style="display: none; margin-top: 20px;" type="submit" class="btn btn-danger" name="button">Delete Orders</button>
   </form>
 </div>     

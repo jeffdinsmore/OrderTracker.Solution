@@ -4,8 +4,8 @@
 }
 <div class="container">
   <br>
-  <h1>Vendors</h1>
-  <h5>Vendors that have placed an order with Pierre's Bakery</h5>
+  <h1>Vendors ordered from Pierre's Bakery</h1>
+  
   @if (@Model.Count == 0)
   {
     <h3>No vendors have been added yet!</h3>
@@ -16,8 +16,8 @@
   }
   <hr>
   <h5 style="margin: 20px 0px 20px 0px"><a href='/vendors/new'>Add a new vendor</a></h5>
-  <h5><a href='/'>Homepage</a></h5>
+  <h5><a href='/'>Back to homepage</a></h5>
   <form action="/vendors/delete" method="post">
-    <button type="submit" class="btn btn-danger btn-sm" name="button">Delete Orders</button>
+    <button style="margin-top:20px;" type="submit" class="btn btn-danger btn-sm" name="button">Delete Orders</button>
   </form>
 </div>
