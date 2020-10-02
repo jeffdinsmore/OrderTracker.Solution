@@ -5,6 +5,10 @@
 <div class="container">
   <br>
   <h3>Here are all the orders for this vendor:</h3>
+  @if (@Model["orders"].Count == 0)
+  {
+    <h4>No orders have been added yet!</h4>
+  } 
   <ol>
   @foreach (Order order in @Model["orders"])
   {
@@ -14,7 +18,8 @@
   <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
   <p><a href='/vendors'>Return to vendor list</a></p>
   <p><a href='/'>Return to Main Page</a></p>
- <form action="/orders/delete" method="post">
+
+  <form action="/vendors/{vendorId}/orders/{orderId}/delete" method="post">
     <button type="submit" class="btn btn-danger" name="button">Delete Orders</button>
   </form>
 </div>     

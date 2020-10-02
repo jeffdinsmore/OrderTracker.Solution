@@ -57,15 +57,6 @@ namespace OrderTracker.Controllers
     {
       Vendor.ClearAll();
       return RedirectToAction("Index");
-    }
-    
-    [HttpPost("/orders/delete")]
-    
-    public ActionResult DeleteAllOrders()
-    {
-      int vendorId = @Model["vendor"].Id;
-      Order.ClearAll();
-      return View("Show", vendorId);
-    }
+    } 
   }
 }
