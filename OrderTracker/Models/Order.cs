@@ -5,12 +5,20 @@ namespace OrderTracker.Models
   public class Order
   {
     public string Item { get; set;}
+    public string Quantity { get; set;}
+    public string Price { get; set;}
+    public string DateOrdered { get; set;}
+    public string DateShipped { get; set;}
     public int Id { get; }
     private static List<Order> _instances = new List<Order> {}; 
 
-    public Order(string item)
+    public Order(string item, string quantity, string price, string dateOrdered, string dateShipped)
     {
       Item = item;
+      Quantity = quantity;
+      Price = price;
+      DateOrdered = dateOrdered;
+      DateShipped = dateShipped;
       _instances.Add(this);
       Id = _instances.Count;
     }

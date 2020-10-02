@@ -41,11 +41,11 @@ namespace OrderTracker.Controllers
 
 // This one creates new Orders within a given vendor, not new vendors:
     [HttpPost("/vendors/{vendorId}/orders")]
-    public ActionResult Create(int vendorId, string orderItem)
+    public ActionResult Create(int vendorId, string orderItem, string quantity, string price, string dateOrdered, string dateShipped)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.Find(vendorId);
-      Order newOrder = new Order(orderItem);
+      Order newOrder = new Order(orderItem, quantity, price, dateOrdered, dateShipped);
       foundVendor.AddOrder(newOrder);
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);

@@ -7,31 +7,32 @@
   <div class="row">
     <div class="col-md-2">
       <p style="font-weight:bold">Item Description</p>
+      <p>@Model["order"].Item</p>
     </div>
     <div class="col-md-2">
       <p style="font-weight:bold">Quantity (Each)</p>
+      <p>@Model["order"].Quantity</p>
     </div>
     <div class="col-md-2">
       <p style="font-weight:bold">Price (Each)</p>
+      <p>@Model["order"].Price</p>
     </div>
     <div class="col-md-2">
       <p style="font-weight:bold">Date Ordered</p>
+      <p>@Model["order"].DateOrdered</p>
     </div>
     <div class="col-md-2">
       <p style="font-weight:bold">Date Shipped</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-2">
-      <p>@Model["order"].Item</p>
+      <p>@Model["order"].DateShipped</p>
     </div>
   </div>
   
-  <h3>Vendor: @Model["vendor"].Name</h3>
-  <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a></p>
-  <p><a href='/vendors'>View all vendors</a></p>
+  
+  
+  <h4><a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a></h4>
+  <h4 style="margin-top:20px"><a href='/vendors'>View all vendors</a></h4>
 
   <form action="/orders/delete" method="post">
-    <button type="submit" class="btn btn-danger" name="button" value="@Model["order"]">Delete Orders</button>
+    <button style="display: none" type="submit" class="btn btn-danger btn-sm" name="button" value="@Model["order"]">Delete Orders</button>
   </form>
 </div>
