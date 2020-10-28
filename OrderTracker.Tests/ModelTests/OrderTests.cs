@@ -16,7 +16,7 @@ namespace OrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("test");
+      Order newOrder = new Order("test", "test1", "test2", "test3", "test4");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -25,10 +25,14 @@ namespace OrderTracker.Tests
     {
       //Arrange
       string description = "Walk the dog.";
-      Order newOrder = new Order(description);
+      string quantity = "3";
+      string price = "4";
+      string dateOrdered = "10/01/2020";
+      string dateShipped = "10/02/2020";
+      Order newOrder = new Order(description, quantity, price, dateOrdered, dateShipped);
 
       //Act
-      string result = newOrder.Description;
+      string result = newOrder.Item;
 
       //Assert
       Assert.AreEqual(description, result);
@@ -39,11 +43,15 @@ namespace OrderTracker.Tests
     {
       // Arrange
       string description = "Walk the dog.";
-      Order newOrder = new Order(description);
+      string quantity = "3";
+      string price = "4";
+      string dateOrdered = "10/01/2020";
+      string dateShipped = "10/02/2020";
+      Order newOrder = new Order(description, quantity, price, dateOrdered, dateShipped);
       // Act
       string updatedDescription = "Do the dishes";
-      newOrder.Description = updatedDescription;
-      string result = newOrder.Description;
+      newOrder.Item = updatedDescription;
+      string result = newOrder.Item;
       // Assert
       Assert.AreEqual(updatedDescription, result);
     }
@@ -64,8 +72,12 @@ namespace OrderTracker.Tests
       // Arrange
       string description01 = "Walk the dog";
       string description02 = "Wash the dishes";
-      Order newOrder1 = new Order(description01);
-      Order newOrder2 = new Order(description02);
+      string quantity = "3";
+      string price = "4";
+      string dateOrdered = "10/01/2020";
+      string dateShipped = "10/02/2020";
+      Order newOrder1 = new Order(description01, quantity, price, dateOrdered, dateShipped);
+      Order newOrder2 = new Order(description02, quantity, price, dateOrdered, dateShipped);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
       // Act
       List<Order> result = Order.GetAll();
@@ -77,7 +89,11 @@ namespace OrderTracker.Tests
     {
       //Arrange
       string description = "Walk the dog.";
-      Order newOrder = new Order(description);
+      string quantity = "3";
+      string price = "4";
+      string dateOrdered = "10/01/2020";
+      string dateShipped = "10/02/2020";
+      Order newOrder = new Order(description, quantity, price, dateOrdered, dateShipped);
 
       //Act
       int result = newOrder.Id;
@@ -92,8 +108,12 @@ namespace OrderTracker.Tests
       //Arrange
       string description01 = "Walk the dog";
       string description02 = "Wash the dishes";
-      Order newOrder1 = new Order(description01);
-      Order newOrder2 = new Order(description02);
+      string quantity = "3";
+      string price = "4";
+      string dateOrdered = "10/01/2020";
+      string dateShipped = "10/02/2020";
+      Order newOrder1 = new Order(description01, quantity, price, dateOrdered, dateShipped);
+      Order newOrder2 = new Order(description02, quantity, price, dateOrdered, dateShipped);
 
       //Act
       Order result = Order.Find(2);

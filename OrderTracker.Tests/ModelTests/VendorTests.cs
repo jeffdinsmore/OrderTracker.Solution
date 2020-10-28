@@ -79,7 +79,7 @@ namespace OrderTracker.Tests
     {
       //Arrange
       string description = "Walk the dog.";
-      Order newOrder = new Order(description);
+      Order newOrder = new Order(description, "3", "4", "10/01/2020", "10/02/2020");
       List<Order> newList = new List<Order> { newOrder };
       string name = "Work";
       Vendor newVendor = new Vendor(name);
