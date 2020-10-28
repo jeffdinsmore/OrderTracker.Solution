@@ -36,7 +36,6 @@ _Any known issues, please reach out to Jeff Dinsmore by email at hello@jeffdinsm
 * _CSS_
 * _Bootstrap_
 * _VS Code_
-* _LINQ_
 * _Entity Framework Core_
 
 ## License
