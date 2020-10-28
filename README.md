@@ -1,12 +1,12 @@
-# _Application Name_
+# _Order Tracker_
 
-#### _{Brief descrition on what application does}, {Date}_
+#### _This website app will allow a user to input and track orders from vendors, 10/02/2020_
 
 #### By _Jeff Dinsmore_
 
 ## Description
 
-_{Detailed description on what the application does.}_
+_The website allows a user to be able to add, edit, delete and create a join between vendors and orders. A user can add vendor information and add order information and join the two together. The website does not utilize a database and all information will be lost once the host is disconnected and the browser is closed._
 
 ## Setup/Installation Requirements
 
@@ -32,10 +32,15 @@ _Any known issues, please reach out to Jeff Dinsmore by email at hello@jeffdinsm
 ## Technologies Used
 
 * _C#_
+* _CSHTML_
+* _CSS_
+* _Bootstrap_
 * _VS Code_
+* _LINQ_
+* _Entity Framework Core_
 
 ## License
 
-Copyright (c) 2020, **_Jeff Dinsmore_**_
+Copyright (c) 2020, **_Jeff Dinsmore_**
 
 This software is licensed under the MIT license.
